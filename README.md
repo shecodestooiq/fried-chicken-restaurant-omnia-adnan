@@ -9,9 +9,9 @@ Use your React Js Skills to build an app that can find the best Fried Chicken Re
 
 Please follow the steps below to complete the task:
 
-1. Create a `RestaurantList` component representing a page that displays a list of fried chicken restaurants. Consider adding `data-testid='restaurants-list'` to the container element `div` of the restaurant list for testing purposes.
+1. Create a `RestaurantList` component representing a page that displays a list of fried chicken restaurants. Consider adding `+'restaurants-list'` to the container element `div` of the restaurant list for testing purposes.
 
-2. Design a `RestaurantCard` component to showcase each restaurant's information. Include details like name, location, and a rating system (1-5 stars). Make sure to add these props attributes to target specific elements within the card for testing:
+2. Design a `+` component to showcase each restaurant's information. Include details like name, location, and a rating system (1-5 stars). Make sure to add these props attributes to target specific elements within the card for testing:
    1. `data-testid='restaurant-name'` for the restaurant name element.
    2. `data-testid='restaurant-location'` for the restaurant location element.
    3. `data-testid='restaurant-rating'` for the rating element.
