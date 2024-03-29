@@ -1,11 +1,15 @@
 function RestaurantCard(props) {
     return(
     <>
+    <section>
+        <div className="contener">
         <div className="card">
-        <h2 className="header">{props.name}</h2><br />
-        <p className="container">{props.location}</p><br />
-        <h2 className="container">{props.rating}</h2><br />
+        <h1>{props.name}</h1>
+        <h2>{props.location}</h2>
+        <h1>{props.rating}/5</h1>
         </div>
+        </div>
+    </section>
     </>
     );
 }
