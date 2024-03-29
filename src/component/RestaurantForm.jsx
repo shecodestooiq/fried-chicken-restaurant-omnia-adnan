@@ -1,5 +1,6 @@
 /* eslint-disable array-callback-return */
 import { useState } from "react";
+import ToDoList from "./ToDoList";
 
 function RestaurantForm() {
     const [NewInput, setNewInput] = useState("");
@@ -19,10 +20,7 @@ function RestaurantForm() {
     setlocationrestaurant("");
     setrange(0);
     };
-    const RemoveToDo = (e) => {
-        e.preventDefault()
-        setToDo(ToDo.filter((NewInput) => NewInput !== e))
-    }
+    
     function editRange(editRange, index) {
         const NewEdit = [...range];
         const item = NewEdit[index];
@@ -49,15 +47,14 @@ function RestaurantForm() {
         <input type="number" value={range} onChange={(e) => setrange(e.target.value)} required max={5} min={1}/>
         </label>
         <button onClick={(e) => AddTodo(e)} type="submit">ADD</button><br />
-        <button onClick={(e) => RemoveToDo(e)} type="submit">Remove</button><br />
         <button onClick={() => {
             setEditing(!Editing);
             // eslint-disable-next-line no-undef
             editRange(index)
         }}>Edit</button>
         </form>
-        {ToDo.map((item) => 
-        <li> {item.name} {item.location} {item.range}</li>
+        {ToDo.map((item, index) => 
+        <ToDoList key={index} name={item.name} location={item.location} range={range} />
         )}
             
     </div>
